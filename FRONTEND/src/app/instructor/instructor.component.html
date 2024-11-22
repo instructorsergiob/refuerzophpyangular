@@ -1,0 +1,39 @@
+<div  *ngIf="!loading">
+    <h2 class="mensajeinstructor">{{mensajeinstructor}}</h2>
+  
+    <!-- Mostrar mensaje de error si hay un problema -->
+    <div *ngIf="error" >
+      <p>{{ error }}</p>
+    </div>
+  
+    <!-- Mostrar los productos -->
+    <div *ngIf="!error">
+      <div class="table-sticky" ngSkipHydration>
+      <table class="table table-dark table-striped table-bordered table-hover ">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Correo</th>
+          </tr>
+        </thead>
+        <tbody>
+      <div *ngFor="let instructor of instructor">
+            <tr>
+                <td>{{ instructor.id }}</td>
+              <td>{{ instructor.nombre }}</td>
+              <td>{{ instructor.correo }}</td>
+            </tr>
+            </div>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+  
+  
+  <!-- Mostrar mensaje de carga -->
+  <div *ngIf="loading">
+    <p>Cargando instructores...</p>
+  </div>
+

@@ -1,0 +1,39 @@
+.table{
+
+    margin: 1em auto 2em;
+    width: 70vw;
+
+}
+
+thead, tbody tr {
+    display: table;               
+    width: 100%;
+    table-layout: auto;          
+  }
+
+tbody {
+    display: block;           
+    max-height: 400px; 
+   overflow-y: auto; 
+    width: 100%; 
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px;
+    width: 33.33%;              
+  }
+
+  .table-sticky table thead {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+
+  .mensajeinstructor{
+    margin: 0 auto;
+    text-align: center;
+    
+  }
